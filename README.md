@@ -25,7 +25,7 @@ CorsParams: *
 Use http://localhost:8000/shell to access athe dynamodb console if querying is needed.
 </br>Refer to CrudSpringbootDynamodbApplication.java to see how ProductCatalog data store is created in DynamoDB. 
 
-## Creating a the crud-springboot image
+## Creating the crud-springboot image
 
 ``` bash
 docker build -t crud-springboot:1.0.0 .
