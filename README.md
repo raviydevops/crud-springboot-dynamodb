@@ -46,14 +46,17 @@ AWS_SECRET_ACCESS_KEY=secret
 ```
 
 ### Try the below end-point to successfully retrieve sample data from DynamoDB
-```
+
+``` no-highlight
 http://localhost:8080/catalogService/products
 ```
+
 Content-Type: application/json
 
 ### Sample PUT request with a JSON payload. Make sure that you set 'Content-Type' to 'application/json' in the request headers
 
 http://localhost:8080/catalogService/products/update/1ed4cd6a-41db-4192-a7b2-8e88c251b6e9
+
 ``` json
     {
         "id": "1ed4cd6a-41db-4192-a7b2-8e88c251b6e9",
@@ -64,10 +67,12 @@ http://localhost:8080/catalogService/products/update/1ed4cd6a-41db-4192-a7b2-8e8
         "currencyCode": "USD"
     }
 ```
+
 ### Sample POST request with a JSON payload. Make sure that you set 'Content-Type' to 'application/json' in the request headers
 
 http://localhost:8080/catalogService/products/add
-Content-Type: application/json
+</br>Content-Type: application/json
+
 ``` json
 {
   "productName": "Ink Pen",
@@ -77,4 +82,3 @@ Content-Type: application/json
   "currencyCode": "USD"
 }
 ```
- 
