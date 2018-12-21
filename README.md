@@ -2,13 +2,26 @@
 
 Sample Spring Boot app to perform CRUD operations using DynamoDB
 
-## Creating a the dynamodb image
+## Building docker images
+
+### Creating a the dynamodb image
 
 ``` bash
 docker build -f Dockerfile.dynamodb -t dynamodb:1.0.0 .
 ```
 
-## Running the dynamodb image
+### Creating the crud-springboot image
+
+``` bash
+docker build -t crud-springboot:1.0.0 .
+```
+
+## Execute or deploy the app
+
+Run or deploy the application through duffle cnab bundles follwing the instructions from the [config repo](https://github.com/raviydevops/crud-springboot-dynamodb-config).
+</br>Or to run on local follow the steps mentioned below.
+
+### Running the dynamodb image
 
 ``` bash
 $ docker run -d -p 8000:8000 dynamodb:1.0.0
@@ -23,13 +36,7 @@ CorsParams: *
 ```
 
 Use http://localhost:8000/shell to access athe dynamodb console if querying is needed.
-</br>Refer to CrudSpringbootDynamodbApplication.java to see how ProductCatalog data store is created in DynamoDB. 
-
-## Creating the crud-springboot image
-
-``` bash
-docker build -t crud-springboot:1.0.0 .
-```
+</br>Refer to CrudSpringbootDynamodbApplication.java to see how ProductCatalog data store is created in DynamoDB.
 
 ### Running the crud-springboot image
 
@@ -45,13 +52,16 @@ AWS_ACCESS_KEY_ID=key
 AWS_SECRET_ACCESS_KEY=secret
 ```
 
-### Try the below end-point to successfully retrieve sample data from DynamoDB
+## Sample Requests
+
+### Sample GET request
+
+Try the below end-point to successfully retrieve sample data from DynamoDB
 
 ``` no-highlight
 http://localhost:8080/catalogService/products
-```
-
 Content-Type: application/json
+```
 
 ### Sample PUT request with a JSON payload
 
