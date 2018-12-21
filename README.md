@@ -1,6 +1,6 @@
-# crud-springboot-dynamodb
+# CNAB implementation for crud-springboot-dynamodb
 
-Sample Spring Boot app to perform CRUD operations using DynamoDB
+CNAB (duffle) implementation of sample springboot app to perform CRUD operations using DynamoDB
 
 ## Building docker images
 
